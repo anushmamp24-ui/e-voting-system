@@ -1,0 +1,35 @@
+<div class="container mt-5" ng-controller="RegisterCtrl">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+
+      <div class="card shadow">
+        <div class="card-header text-center bg-primary text-white">
+          <h4>Voter Registration</h4>
+        </div>
+
+        <div class="card-body">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" ng-model="user.name" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" ng-model="user.email" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" ng-model="user.password" required>
+          </div>
+
+          <button class="btn btn-primary w-100" ng-click="register()">
+            Register
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

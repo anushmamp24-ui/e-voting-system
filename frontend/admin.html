@@ -1,0 +1,24 @@
+<div class="container mt-5" ng-controller="AdminCtrl">
+  <div class="card shadow">
+    <div class="card-header bg-dark text-white text-center">
+      <h4>Election Results</h4>
+    </div>
+
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>Candidate</th>
+            <th>Votes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="r in results">
+            <td>{{r.name}}</td>
+            <td>{{r.votes}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

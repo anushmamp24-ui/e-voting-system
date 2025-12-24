@@ -1,0 +1,25 @@
+<div class="container mt-5" ng-controller="VoteCtrl">
+  <div class="card shadow">
+    <div class="card-header bg-info text-white text-center">
+      <h4>Cast Your Vote</h4>
+    </div>
+
+    <div class="card-body">
+      <div class="form-check mb-2" ng-repeat="c in candidates">
+        <input class="form-check-input" type="radio"
+               ng-model="$parent.selectedCandidate"
+               ng-value="c.id">
+
+        <label class="form-check-label">
+          {{c.name}} - {{c.party}}
+        </label>
+      </div>
+
+      <button class="btn btn-info mt-3"
+              ng-click="vote()"
+              ng-disabled="!selectedCandidate">
+        Submit Vote
+      </button>
+    </div>
+  </div>
+</div>
