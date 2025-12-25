@@ -1,8 +1,25 @@
-var app = angular.module("evoteApp", []);
 
-app.controller("RegisterCtrl", function($scope, $http){
-  $scope.register = function(){
-    $http.post("../backend/api/register.php", $scope.user)
-    .then(res => alert(res.data.message));
-  }
+var app = angular.module("evotingApp", ["ngRoute"]);
+
+app.config(function($routeProvider) {
+    $routeProvider
+        .when("/login", {
+            templateUrl: "login.html",
+            controller: "LoginCtrl"
+        })
+        .when("/register", {
+            templateUrl: "register.html",
+            controller: "RegisterController"
+        })
+        .when("/vote", {
+            templateUrl: "vote.html",
+            controller: "VoteController"
+        })
+        .when("/admin", {
+            templateUrl: "admin.html",
+            controller: "AdminController"
+        })
+        .otherwise({
+            redirectTo: "/login"
+        });
 });
