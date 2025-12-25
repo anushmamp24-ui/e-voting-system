@@ -1,5 +1,5 @@
 
-var app = angular.module("evotingApp", ["ngRoute"]);
+var app = angular.module("evoteApp", ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider
